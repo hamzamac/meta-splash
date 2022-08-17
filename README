@@ -1,0 +1,41 @@
+This README file contains information on the contents of the meta-splash layer.
+
+meta-splash layes allows customization of pshlash colors and image.
+
+Please see the corresponding sections below for details.
+
+Dependencies
+============
+
+  URI: git://git.yoctoproject.org/poky
+  branch: master
+
+
+Patches
+=======
+
+Please submit any patches against the meta-splash layer to the xxxx mailing list (xxxx@zzzz.org)
+and cc: the maintainer:
+
+Maintainer: Makame Makame <hamzamac@live.com>
+
+Table of Contents
+=================
+
+  I. Adding the meta-splash layer to your build
+    1. Clone meta-splash from ``
+    2. Rename your logo image to logo.png
+    3. Place the logo.png file in `meta-splash/recipes-core/psplash/files`
+    4. Customize the splash scereen colors in `meta-splash/recipes-core/psplash/customize.bb`
+
+
+I. Adding the meta-splash layer to your build
+=================================================
+
+Run 'bitbake-layers add-layer meta-splash'
+
+II. Bake the recepie
+========
+
+Run `bitbake psplash`
+
