@@ -19,23 +19,27 @@ and cc: the maintainer:
 
 Maintainer: Makame Makame <hamzamac@live.com>
 
-Table of Contents
+How it's done
 =================
 
   I. Adding the meta-splash layer to your build
-    1. Clone meta-splash from ``
-    2. Rename your logo image to logo.png
-    3. Place the logo.png file in `meta-splash/recipes-core/psplash/files`
-    4. Customize the splash scereen colors in `meta-splash/recipes-core/psplash/customize.bb`
+    1. Clone meta-splash by running `git clone https://github.com/hamzamac/meta-splash.git`
+    2. Run 'bitbake-layers add-layer meta-splash' to add the layer to bitbake.conf
 
+  II. Customization
+    - Logo image customization
+      1. Rename your logo image to logo.png
+      2. Place the logo.png file in `meta-splash/recipes-core/psplash/files`
 
-I. Adding the meta-splash layer to your build
-=================================================
+    - Color customization
+      1. Customize the splash scereen colors in `meta-splash/recipes-core/psplash/customize.bb`
+      The following pspash variables can be modified
+        - BACKGROUND_COLOR
+        - TEXT_COLOR
+        - BAR_COLOR
+        - BAR_BACKGROUND_COLOR
 
-Run 'bitbake-layers add-layer meta-splash'
+  III. Bake the recepie
+      - Run `bitbake psplash`
 
-II. Bake the recepie
-========
-
-Run `bitbake psplash`
 
