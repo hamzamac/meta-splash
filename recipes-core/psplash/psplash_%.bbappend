@@ -1,8 +1,8 @@
 include customize.bb
-
+DISTRO_PKG_NAME ?= "default"
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 SPLASH_IMAGES:forcevariable = "file://${SPLASH_IMAGE_NAME} \
-                               file://${SPLASH_IMAGE_NAME};outsuffix=raspberrypi \
+                               file://${SPLASH_IMAGE_NAME};outsuffix=${DISTRO_PKG_NAME} \
                               "
 
 # TASKS
