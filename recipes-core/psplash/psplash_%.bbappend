@@ -1,8 +1,8 @@
 include customize.bb
-DISTRO_PKG_NAME ?= "default"
+MACHINE_PSPLASH_PKG ?= "default"
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 SPLASH_IMAGES:forcevariable = "file://${SPLASH_IMAGE_NAME} \
-                               file://${SPLASH_IMAGE_NAME};outsuffix=${DISTRO_PKG_NAME} \
+                               file://${SPLASH_IMAGE_NAME};outsuffix=${MACHINE_PSPLASH_PKG} \
                               "
 
 # TASKS
@@ -28,17 +28,16 @@ def setPsplashColors(srcdir, BACKGROUND_COLOR, TEXT_COLOR, BAR_COLOR, BAR_BACKGR
 
 python do_display_banner() {
     bb.plain("***********************************************");
-    bb.plain("*                                             *");
     bb.plain("*                META-SPLASH                  *");
-    bb.plain("*                                             *");
-    bb.plain("***********************************************");
+    bb.plain("*      Applying custom psplash image          *");
+    bb.plain("***********************************************");    
 }
 
 addtask display_banner before do_build
 
 do_compile:prepend() {
     bb.plain("***********************************************");
-    bb.plain("*                  apply collors              *");
+    bb.plain("*     Applying custom psplash colors          *");
     bb.plain("***********************************************");
 
     srcdir = d.getVar('S')
