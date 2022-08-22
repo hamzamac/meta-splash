@@ -4,7 +4,7 @@ LICENSE = "GPL-2.0-or-later"
 LIC_FILES_CHKSUM = "file://COPYING;md5=39bba7d2cf0ba1036f2a6e2be52fe3f0"
 
 # Logo image file name as in /files folder
-SPLASH_IMAGE_NAME = "logo-img.png"
+SPLASH_IMAGE_NAME = "logo.png"
 
 # Color values in R,G,B format "0x00,0x00, 0x00"
 BACKGROUND_COLOR = "0xff,0xff,0xff"
