@@ -14,6 +14,6 @@ BAR_BACKGROUND_COLOR = "0xff,0xff,0xff"
 
 # Overide MACHINE_PSPLASH_PKG name
 # add you own override if misssing
-MACHINE_PSPLASH_PKG:qemuall = "default"
-MACHINE_PSPLASH_PKG:qemux86-64 = "default"
-MACHINE_PSPLASH_PKG:rpi = "raspberrypi"
+#MACHINE_PSPLASH_PKG:qemuall = "default"
+#MACHINE_PSPLASH_PKG:qemux86-64 = "default"
+MACHINE_PSPLASH_PKG = "raspberrypi"
