@@ -1,7 +1,7 @@
 include customize.bb
 MACHINE_PSPLASH_PKG ?= "default"
-FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
-SPLASH_IMAGES:forcevariable = "file://${SPLASH_IMAGE_NAME} \
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+SPLASH_IMAGES_forcevariable = "file://${SPLASH_IMAGE_NAME} \
                                file://${SPLASH_IMAGE_NAME};outsuffix=${MACHINE_PSPLASH_PKG} \
                               "
 
@@ -35,7 +35,7 @@ python do_display_banner() {
 
 addtask display_banner before do_build
 
-do_compile:prepend() {
+do_compile_prepend() {
     bb.plain("***********************************************");
     bb.plain("*     Applying custom psplash colors          *");
     bb.plain("***********************************************");
